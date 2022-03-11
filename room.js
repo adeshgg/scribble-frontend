@@ -16,7 +16,8 @@ if (!name || !roomId) window.location = "/index.html"
 // const socket = io(serverUrl)
 const socket = io(
   "https://cors-solving.herokuapp.com/" +
-    "https://scribble-backend.herokuapp.com/"
+    "https://scribble-backend.herokuapp.com/",
+  { transports: ["websocket"] }
 )
 
 const guessForm = document.querySelector("[data-guess-form]")
