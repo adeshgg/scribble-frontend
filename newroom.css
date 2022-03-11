@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #333;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.game-container {
+  flex-grow: 1;
+  display: flex;
+}
+
+.game-board {
+  width: 80%;
+  height: 100%;
+  background-color: white;
+}
+
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+}
+
+.text-section {
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 170px;
+}
+
+.word {
+  margin: 0;
+  margin-bottom: 0.25rem;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+}
+
+.messages {
+  flex-grow: 1;
+  min-height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.guess-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.guess-input {
+  margin: 0.25rem 0;
+}
+
+.guess-btn {
+  cursor: pointer;
+}
+
+.ready-btn {
+  cursor: pointer;
+}
+
+.guess-container {
+  background-color: #ccc;
+  border-radius: 0.25rem;
+  padding: 0.4rem;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.guess-container > .name {
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: #555;
+  word-break: break-all;
+}
+
+.guess-container > .text {
+  word-break: break-all;
+}
+
+@media (max-width: 500px) {
+  .text-section {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 35%;
+  }
+
+  .tool:not(:first-child) {
+    margin-top: 15px;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+.fas,
+.far {
+  font-size: 25px;
+  color: white;
+  background-color: rgb(82, 82, 82);
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.fas:hover,
+.far:hover {
+  filter: brightness(90%);
+}
+
+.active-tool > span {
+  background-color: rgb(82, 82, 82);
+  border-radius: 5px;
+  padding: 2.5px 16px;
+  color: white;
+  font-size: 20px;
+  user-select: none;
+}
+
+.tool:not(:first-child) {
+  margin-left: 8px;
+}
+
+.size {
+  background-color: rgb(82, 82, 82);
+  border-radius: 5px;
+  padding: 2.5px 8px;
+  color: white;
+  font-size: 20px;
+  user-select: none;
+}
+
+.slider {
+  -webkit-appearance: none;
+  background: rgb(177, 177, 177);
+  outline: none;
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: rgb(255, 255, 255);
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: rgb(255, 255, 255);
+}
+
+/* JS Color */
+.jscolor {
+  border-style: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 120px;
+  margin-left: 3px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}

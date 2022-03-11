@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pictionary</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="newroom.css" />
+    <script src="./jscolor.js" defer></script>
+    <script src="./room.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <div class="active-tool">
+          <span id="active-tool" title="Active Tool">Brush</span>
+        </div>
+        <div class="brush tool">
+          <i class="fas fa-brush" id="brush" title="Brush"></i>
+          <input class="jscolor" value="000000" id="brush-color" />
+          <span class="size" id="brush-size" title="Brush Size">1</span>
+          <input
+            type="range"
+            min="1"
+            max="5"
+            value="1"
+            class="slider"
+            id="brush-slider"
+          />
+        </div>
+        <div class="bucket tool">
+          <i class="fas fa-fill-drip" title="Background Color"></i>
+          <input class="jscolor" value="ffffff" id="bucket-color" />
+        </div>
+        <div class="tool">
+          <i class="fas fa-eraser" id="eraser" title="Eraser"></i>
+        </div>
+        <div class="tool">
+          <i class="fas fa-undo-alt" id="clear-canvas" title="Clear"></i>
+        </div>
+      </div>
+      <div class="game-container">
+        <canvas class="game-board" data-canvas></canvas>
+        <section class="text-section">
+          <h3 class="word" data-word></h3>
+          <div class="messages" data-messages></div>
+          <form class="guess-form" data-guess-form>
+            <input
+              type="text"
+              class="guess-input"
+              data-guess-input
+              placeholder="Your Guess..."
+            />
+            <button type="submit" class="guess-btn">Guess</button>
+          </form>
+          <button type="button" data-ready-btn class="ready-btn">Ready</button>
+        </section>
+      </div>
+    </div>
+
+    <template data-guess-template>
+      <div class="guess-container">
+        <div class="name" data-name></div>
+        <div class="text" data-text></div>
+      </div>
+    </template>
+  </body>
+</html>
