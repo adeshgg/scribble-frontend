@@ -14,7 +14,10 @@ const roomId = urlParams.get("room-id")
 if (!name || !roomId) window.location = "/index.html"
 
 // const socket = io(serverUrl)
-const socket = io("https://scribble-backend.herokuapp.com/")
+const socket = io(
+  "https://cors-solving.herokuapp.com/" +
+    "https://scribble-backend.herokuapp.com/"
+)
 
 const guessForm = document.querySelector("[data-guess-form]")
 const guessInput = document.querySelector("[data-guess-input]")
