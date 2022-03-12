@@ -184,6 +184,7 @@ function resetRound(name, word) {
   }
 
   drawableCanvas.canDraw = false
+  brushColor.style.backgroundColor = "#000000"
   theBrushFunction()
   brushSizeInput.value = 1
   theBrushSizeFunction()
